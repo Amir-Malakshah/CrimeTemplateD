@@ -32,7 +32,7 @@
                         </a>
                         <p class="post-meta">
                             Posted by
-                            <%= signalements[i].userid.username %>
+                            <%= signalements[i].userid && signalements[i].userid.username ? signalements[i].userid.username : "Unknown user" %>
                             le <%= signalements[i].dateSignalement.toLocaleDateString('ca-fr') %>
                         </p>
                     </div>
