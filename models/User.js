@@ -11,7 +11,11 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: [true,"Entrez un mot de passe"]
-    }
+    },
+    userid: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: "User"
+}
 });
 UserSchema.plugin(uniqueValidator, { message: "Le nomd'utilisateur doit etre unique" });
 
