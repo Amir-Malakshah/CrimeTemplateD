@@ -27,10 +27,17 @@ app.use(bodyParser.urlencoded({ extended: true}))
 const Signalement = require('./models/Signalement.js')
 const mongoose = require('mongoose');
 const { error } = require('console')
+const PORT = process.env.PORT || 5000;
 mongoose.set('strictQuery', false);
-mongoose.connect('mongodb://127.0.0.1/ma_bd',
-    {useNewUrlParser: true}
-)
+mongoose.connect(
+    // 'mongodb://127.0.0.1/ma_bd',
+    "mongodb+srv://malekshahamirbahador:Canada991349%2A@cluster0.eh28y.mongodb.net/?retryWrites=true&w=majority",
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }
+).then(() => console.log("MongoDB connecté ✅"))
+.catch(err => console.error("Erreur MongoDB ❌", err));
 
 
 
@@ -57,9 +64,9 @@ app.use("*", (req,res, next) => {
 
 app.get('/users/logout',logoutController)
 
-app.listen(5000, () => {
-    console.log('Application ecoute sur le port 4000')
-})
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
 
 app.get('/users/new', validuserMiddleware,newUserController)
 
