@@ -31,7 +31,7 @@ const PORT = process.env.PORT || 5000;
 mongoose.set('strictQuery', false);
 mongoose.connect(
     // 'mongodb://127.0.0.1/ma_bd',
-    "mongodb+srv://malekshahamirbahador:Canada991349%2A@cluster0.eh28y.mongodb.net/?retryWrites=true&w=majority",
+    process.env.MONGODB_URI,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
