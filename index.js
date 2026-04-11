@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express')
 const path = require('path')
 const app = new express()
@@ -43,9 +44,9 @@ mongoose.connect(
 
 app.use(
     expressSession({
-        secret: "green arrow",
-        resave: true,
-        saveUninitialized: true
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false
     })
 );
 

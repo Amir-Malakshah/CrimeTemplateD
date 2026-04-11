@@ -10,7 +10,7 @@ It allows users to create, manage, and view crime reports (signalements) with au
 ## 🛠️ Technologies
 - Node.js
 - Express.js
-- MongoDB (Mongoose)
+- MongoDB Atlas (Mongoose)
 - EJS (Embedded JavaScript Templates)
 - Express Session
 
@@ -28,3 +28,21 @@ Clone the repository:
 ```bash
 git clone https://github.com/Amir-Malakshah/CrimeTemplateD.git
 cd CrimeTemplateD
+npm install
+
+## 🔐 Environment Variables
+
+Create a `.env` file in the root directory and add:
+
+```env
+MONGODB_URI=your_mongodb_atlas_connection_string
+SESSION_SECRET=your_secret_key
+PORT=5000
+
+▶️ Run the Application
+
+npm start
+
+Then open:
+
+http://localhost:5000
