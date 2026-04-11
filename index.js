@@ -44,9 +44,9 @@ mongoose.connect(
 
 app.use(
     expressSession({
-        secret: process.env.SESSION_SECRET,
-        resave: false,
-        saveUninitialized: false
+        secret: "green arrow",
+        resave: true,
+        saveUninitialized: true
     })
 );
 

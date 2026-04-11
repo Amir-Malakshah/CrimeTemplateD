@@ -28,11 +28,15 @@ Clone the repository:
 ```bash
 git clone https://github.com/Amir-Malakshah/CrimeTemplateD.git
 cd CrimeTemplateD
+
+Install dependencies:
+
+```bash
 npm install
 
-## 🔐 Environment Variables
+🔐 Environment Variables
 
-Create a `.env` file in the root directory and add:
+Create a .env file in the root directory and add:
 
 ```env
 MONGODB_URI=your_mongodb_atlas_connection_string
@@ -41,8 +45,15 @@ PORT=5000
 
 ▶️ Run the Application
 
+```
+Start the server:
+
 npm start
 
 Then open:
 
 http://localhost:5000
+
+```md
+Note: You need your own MongoDB Atlas connection string to run this project locally.
+
