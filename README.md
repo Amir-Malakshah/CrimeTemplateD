@@ -47,17 +47,22 @@ MONGODB_URI=your_mongodb_atlas_connection_string
 SESSION_SECRET=your_secret_key
 PORT=5000
 
+```
+
 ▶️ Run the Application
 
-```
 Start the server:
 
+```bash
 npm start
+
+```
 
 Then open:
 
+```bash
 http://localhost:5000
+```
 
-```md
 Note: You need your own MongoDB Atlas connection string to run this project locally.
 
