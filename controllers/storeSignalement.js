@@ -6,7 +6,7 @@ module.exports = (req,res) => {
         image.name), async(error) => {
             await Signalement.create({
                 ...req.body,
-                image: '/assets/img' + image.name,
+                image: '/assets/img/' + image.name,
                 userid: req.session.userId
             })
             res.redirect('/')
