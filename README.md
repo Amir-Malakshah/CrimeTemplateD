@@ -29,10 +29,14 @@ Clone the repository:
 git clone https://github.com/Amir-Malakshah/CrimeTemplateD.git
 cd CrimeTemplateD
 
+```
+
 Install dependencies:
 
 ```bash
 npm install
+
+```
 
 🔐 Environment Variables
 
